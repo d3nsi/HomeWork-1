@@ -1,0 +1,98 @@
+* {
+    font-size: 25px;
+    font-family: "Noto Sans Display", sans-serif;
+}
+
+.container {
+    border: 3px solid rgb(5, 129, 179);
+    background: rgb(212, 229, 236);
+    width: 350px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.date {
+    text-align: right;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 25px;
+    margin-bottom: 45px;
+}
+
+.text {
+    margin-bottom: 25px;
+}
+
+.card {
+    display: inline-block;
+    margin: 3px;
+    width: 175px;
+    height: 200px;
+}
+
+.card-number {
+    border-radius: 2px 2px 0 0;
+    height: 150px;
+    background: greenyellow;
+}
+
+.content {
+    font-size: 100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card-title {
+    border-radius: 0 0 2px 2px;
+    font-size: 15px;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+.card:nth-child(odd) .card-number {
+    color: white;
+}
+
+.card:nth-child(1) .card-number {
+    background: rgb(36, 146, 14);
+}
+
+.card:nth-child(2) .card-number {
+    color: black;
+    background: rgb(29, 199, 241);
+}
+
+.card:nth-child(3) .card-number {
+    background: orange;
+}
+
+.container-cards:nth-child(2) .card {
+    position: relative;
+}
+
+img {
+    margin-left: 5px;
+    margin-top: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.image {
+    position: absolute;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    top: 130px;
+    background: rgb(54, 195, 238);
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+.image:hover {
+    cursor: pointer;
+}

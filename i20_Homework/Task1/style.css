@@ -1,0 +1,8 @@
+th {
+    text-align: center;
+    width: 100px;
+}
+
+th:first-child {
+    width: 200px;
+}

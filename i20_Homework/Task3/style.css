@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+input {
+    margin: 0;
+}
+
+body {
+    background: rgb(228, 228, 228);
+}
+
+.container {
+    max-width: 500px;
+    height: 475px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 100px;
+    background: white;
+}
+
+.form-login {
+    width: 350px;
+    padding-top: 30px;
+    margin: 0 auto;
+}
+
+.username {
+    margin-bottom: 20px;
+}
+
+.footer {
+    position: relative;
+    margin-top: 5px;
+}
+
+.link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 16px;
+    display: inline-block;
+}
+
+button {
+    margin-top: 55px;
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    border: none;
+    background: rgb(36, 36, 36);
+}
+
+button:hover {
+    transition: 0.5s;
+    cursor: pointer;
+    border: 2px solid black;
+    color: black;
+    background: white;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+    font-size: 12px;
+}
+
+a:hover {
+    transition: 0.5s;
+    text-decoration: underline;
+    color: red;
+}
+
+.label-text {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: rgb(107, 107, 107);
+}
+
+.input-text {
+    width: 100%;
+    line-height: 40px;
+    font-size: 25px;
+    padding-left: 5px;
+    padding-right: 35px;
+    margin-bottom: 10px;
+    border: none;
+    border: 1px solid rgb(214, 214, 214);
+}
+
+.input-text:focus {
+    outline: none;
+    border: 1px solid blue;
+    box-shadow: 1px 1px 8px 0px rgba(0, 144, 255, 0.25);
+}
+
+.header-text {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: rgb(85, 83, 83);
+}
+
+.checkbox {
+    color: rgb(173, 173, 173);
+    font-size: 12px;
+}
+
+.input-checkbox {
+    position: absolute;
+    left: -99999px;
+}
+
+.input-checkbox + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    padding-top: 2px;
+    cursor: pointer;
+}
+
+.input-checkbox + label:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #bdb8b8;
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+
+.input-checkbox + label:after {
+    content: "";
+    position: absolute;
+    transition: all 0.2s ease;
+
+    left: 2px;
+    top: 3px;
+    width: 10px;
+    height: 5px;
+    border-radius: 1px;
+    border-left: 4px solid #000000;
+    border-bottom: 4px solid #000000;
+    transform: rotate(-45deg);
+}
+
+.input-checkbox:not(:checked) + label:after {
+    opacity: 0;
+}
+
+.input-checkbox:checked + label:after {
+    opacity: 1;
+}
+
+.password {
+    position: relative;
+}
+
+.password-control {
+    position: absolute;
+    top: 41px;
+    right: 10px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    opacity: 0.4;
+}
+
+.password-control:hover {
+    cursor: pointer;
+    opacity: 1;
+}
