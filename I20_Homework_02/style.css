@@ -1,0 +1,293 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Circe;
+}
+
+.layout {
+  max-width: 1150px;
+  padding: 22px 0 70px 0;
+  margin: 0 auto;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product__preview {
+  width: 500px;
+}
+
+.product__gallery {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.product__scroll {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.product__image {
+  width: 100px;
+  cursor: pointer;
+}
+
+.product__image--main {
+  width: 340px;
+}
+
+.product__description {
+  max-width: 500px;
+  padding-top: 45px;
+}
+
+.product__title {
+  color: #131313;
+  font-family: "CirceExtraBold";
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.product__categories {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #006be5;
+  font-weight: 300;
+  letter-spacing: 0.13px;
+}
+
+.product__categories a {
+  margin: 0 30px 15px 0;
+}
+
+.product__price {
+  display: flex;
+  margin: 30px 0 0 0;
+}
+
+.product__price-old {
+  text-decoration: line-through;
+  opacity: 0.3;
+}
+
+.product__price-current {
+  font-family: CirceBold;
+  margin: 0 0 0 10px;
+  opacity: 0.6;
+}
+
+.product__price-discount {
+  margin: 0 0 0 60px;
+}
+
+.product__discount-value {
+  font-weight: 700;
+}
+
+.product__discount-text {
+  opacity: 0.7;
+}
+
+.product__info {
+  background-color: aliceblue;
+  max-width: 300px;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.product__info-item img {
+  width: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.product__info-item + .product__info-item {
+  margin-top: 5px;
+}
+
+.product__counter {
+  display: flex;
+  margin-top: 25px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.product__minus {
+  padding: 0 10px;
+  cursor: pointer;
+  color: gainsboro;
+  border-top: 1px solid gainsboro;
+  border-left: 1px solid gainsboro;
+  border-bottom: 1px solid gainsboro;
+}
+
+.product__count {
+  padding: 0 25px 0 25px;
+  background-color: #ede9e9;
+  border: 1px solid gainsboro;
+  width: 80px;
+}
+
+.product__plus {
+  padding: 0 10px;
+  cursor: pointer;
+  border-top: 1px solid gainsboro;
+  border-right: 1px solid gainsboro;
+  border-bottom: 1px solid gainsboro;
+}
+
+.product__actions {
+  margin-top: 25px;
+}
+
+.custom-btn {
+  display: inline-block;
+  color: #131313;
+  text-transform: uppercase;
+  padding: 0px 5px;
+  border: none;
+  font-size: 13px;
+  font-family: CirceBold;
+  height: 48px;
+  line-height: 48px;
+  letter-spacing: 0.65px;
+  background-color: white;
+  border: 2px solid #d9d9d9;
+  min-width: 200px;
+}
+
+.custom-btn:hover {
+  cursor: pointer;
+  background-color: #f7f9fc;
+  transition: 0.3s;
+}
+
+.custom-btn + .custom-btn {
+  margin-left: 10px;
+}
+
+.custom-btn--blue {
+  border: 2px solid #006be5;
+  color: #fff;
+  background-color: #006be5;
+}
+
+.custom-btn--blue:hover {
+  cursor: pointer;
+  border: 2px solid #0095e5;
+  background-color: #0095e5;
+  transition: 0.3s;
+}
+
+.product__text {
+  margin-right: 45px;
+  text-align: justify;
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+.product__share {
+  margin-top: 30px;
+}
+
+.product__share-text {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-right: 15px;
+}
+
+.product__icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding-top: 2px;
+  border: 2px solid rgb(187, 176, 176);
+  border-radius: 50%;
+  margin: 0 2px;
+}
+
+.product__icon:hover {
+  cursor: pointer;
+  border: 2px solid rgb(25, 130, 242);
+  transition: 0.3s;
+}
+
+.product__repost {
+  display: inline-block;
+  font-size: 13px;
+  background: url("img/icon/repost.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-left: 5px;
+  padding: 4px 10px 2px 15px;
+}
+
+.price {
+  letter-spacing: 1.5px;
+}
+
+.price::after {
+  content: "₽";
+  margin-left: 5px;
+}
+
+a {
+  color: rgb(0, 123, 255);
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  transition: 0.3s;
+}
+
+a + a {
+  margin-left: 25px;
+}
+
+@font-face {
+  font-family: "CirceBold";
+  src: url("./fonts/circe-bold.ttf");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "CirceExtraBold";
+  src: url("./fonts/circe-extrabold.ttf");
+  font-style: normal;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "CirceLight";
+  src: url("./fonts/circe-light.ttf");
+  font-style: normal;
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "Circe";
+  src: url("./fonts/circe.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "GeometriaMedium";
+  src: url("./fonts/geometria-medium.ttf");
+  font-style: normal;
+  font-weight: medium;
+}

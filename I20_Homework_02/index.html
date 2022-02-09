@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="layout">
+    <div class="product">
+
+      <div class="product__preview">
+        <div class="product__gallery">
+          <div class="product__scroll">
+            <img class="product__image" src="img/img1.jpg">
+            <img class="product__image" src="img/img2.jpg">
+            <img class="product__image" src="img/img3.jpg">
+          </div>
+          <img class="product__image--main" src="img/img1.jpg">
+        </div>
+      </div>
+
+      <div class="product__description">
+        <h2 class="product__title">Рубашка MEDICINE</h2>
+        <div class="product__categories">
+          <a href="#">Рубашка Medicine</a>
+          <a href="#">Все модели Medicine</a>
+          <a href="#">Рубашки</a>
+        </div>
+
+        <div class="product__price">
+          <div class="product__price-actual">
+            <span class="product__price-old">2 699</span>
+            <span class="product__price-current price">2 499</span>
+          </div>
+
+          <div class="product__price-discount">
+            <span class="product__discount-value price">2 227</span>
+            <span class="product__discount-text">– с промокодом</span>
+          </div>
+        </div>
+
+        <div class="product__info">
+          <div class="product__info-item">
+            <img src="img/icon/ok.png" alt="#">
+            В наличии в магазине <a href="#">Lamoda</a>
+          </div>
+          <div class="product__info-item">
+            <img src="img/icon/delivery.png" alt="#">
+            Бесплатная доставка
+          </div>
+        </div>
+
+        <div class="product__counter">
+          <div class="product__minus">–</div>
+          <div class="product__count">0</div>
+          <div class="product__plus">+</div>
+        </div>
+
+        <div class="product__actions">
+          <button class="custom-btn custom-btn--blue" id="buy">купить</button>
+          <button class="custom-btn">в избранное</button>
+        </div>
+
+        <div class="product__text">Рубашка Medicine выполнена из вискозной ткани с келтчатым узором. Детали: прямой
+          крой; отложной воротник; планка и манжеты на пуговицах; карман на груди.</div>
+
+        <div class="product__share">
+          <span class="product__share-text">Поделиться:</span>
+          <div class="product__icon"><a href="#"><img src="img/icon/vk.png"></a></div>
+          <div class="product__icon"><a href="#"><img src="img/icon/google.png"></a></div>
+          <div class="product__icon"><a href="#"><img src="img/icon/facebook.png"></a></div>
+          <div class="product__icon"><a href="#"><img src="img/icon/twitter.png"></a></div>
+          <div class="product__repost">123</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="dist/notice.js"></script>
+</body>
+
+</html>
