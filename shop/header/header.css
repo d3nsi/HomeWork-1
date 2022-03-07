@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: Circe;
+}
+
+.header {
+  background-color: rgb(44, 42, 42);
+  box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+}
+
+.header__link {
+  color: rgb(235, 233, 233);
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.header__link:hover {
+  color: rgb(187, 187, 187);
+}
+
+.layout {
+  max-width: 1150px;
+  padding: 22px 0 22px 0;
+  margin: 0 auto;
+}
+
+.header__nav {
+  display: flex;
+}
+
+.header__item {
+  margin: 0 20px 0 0;
+  cursor: pointer;
+}
+
+.header__item:hover .pop-up {
+  display: block;
+}
+
+.pop-up {
+  display: none;
+  position: absolute;
+  background-color: rgb(44, 42, 42);
+}
+
+.pop-up__link {
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  border: none;
+  color: rgb(235, 233, 233);
+  background-color: rgb(44, 42, 42);
+  padding: 3px 10px;
+}
+
+.pop-up__link:hover {
+  color: rgb(29, 25, 25);
+  cursor: pointer;
+  background-color: rgb(166, 238, 214);
+}
+
+.header__item:last-child {
+  margin-left: auto;
+}
+
+@font-face {
+  font-family: "CirceBold";
+  src: url("./fonts/circe-bold.ttf");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "CirceExtraBold";
+  src: url("./fonts/circe-extrabold.ttf");
+  font-style: normal;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "CirceLight";
+  src: url("./fonts/circe-light.ttf");
+  font-style: normal;
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "Circe";
+  src: url("./fonts/circe.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "GeometriaMedium";
+  src: url("./fonts/geometria-medium.ttf");
+  font-style: normal;
+  font-weight: medium;
+}

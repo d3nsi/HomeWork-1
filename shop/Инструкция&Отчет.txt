@@ -1,0 +1,44 @@
+!!!
+--------ПЕРЕД ОТКРЫТИЕМ САЙТА-------------
+Перед открытием index.php зайдите в файл sql/connectDB.php и подставить свои значения login и password.
+На старнице index.php в браузере нажать на create database, после проверить соединение check connection, в случае успешного подключения, нажать create tables, также можно заполнить таблицы случайными данными по кнопке fill tables.
+
+!!!
+
+--------ПЕРЕД ДОБАВЛЕНИЕМ НОВОГО ТОВАРА-------------
+После добавления товара в таблицу Product, обязательно добавить связь в таблицу Product_has_category (product_id, category_id), где category_id = Product (category_id).
+
+Такаже считается что у товара ВСЕГДА есть связь в таблице Product_has_image (product_id, image_id), которая ведет к таблице Image, у которой есть запись image_src = %main.%
+
+Пример добавления:
+INSERT INTO category (category_name, category_description) VALUES ('Рубашки', 'Описание рубашек')
+
+INSERT INTO product (product_name, product_price, product_description, category_id) VALUES ('Рубашка MEDICINE', 1999, 'Черная рубашка', 6)
+
+INSERT INTO product_has_category VALUES (601, 6)
+
+INSERT INTO product_has_image VALUES (601, 1)
+
+
+
+
+Отчет по безопасности:
+
+XSS:
+Уязвимостей XSS нет, так как мы не выводим данные которые получаем от пользователя, но если бы выводили, то можно было использовать функцию htmlspecialchars() перед выводом данных.
+В случае с GET запросом, так как мы получаем только id, достаточно проверить на корректность ввода числа
+function isInt($val) {
+  if (strlen($val) == strlen(intval($val)))
+    return true;
+  else
+    return false;
+}
+
+SQL Injection:
+На странцие "Обратная связь", передь записью данных в базу данных, используем подготовленный запрос от атаки "SQL Injection".
+
+Отправляем шаблон серверу
+$stmt = $link->prepare("INSERT INTO feedback (feedback_name, feedback_mail, feedback_birthday, feedback_gender, feedback_topic, feedback_msg) VALUES (?, ?, ?, ?, ?, ?)");
+
+После отправляем переменные
+$stmt->bind_param("ssssss", $name, $email, $date, $gender, $topic, $msg);

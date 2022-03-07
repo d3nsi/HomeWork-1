@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(247, 247, 247);
+}
+
+.catalog__desc {
+  padding-left: 1px;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(4, 0.3fr);
+  grid-gap: 100px;
+  padding: 26px 0 0 0;
+}
+
+.card {
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  text-align: center;
+  border: 1px solid rgb(124, 124, 124);
+}
+
+.card:hover {
+  box-shadow: 0px 5px 10px 2px rgba(0, 145, 255, 0.3);
+}
+
+.card__image-box {
+  width: 100%;
+  height: 260px;
+}
+
+.card__img {
+  width: 100%;
+  height: 100%;
+}
+
+.card__title {
+  padding: 10px 0;
+  font-weight: 700;
+  background-color: rgb(170, 168, 228);
+}
+
+.card__price {
+  padding: 10px 0;
+  background-color: rgb(237, 198, 140);
+}
+
+.card__price::after {
+  content: "₽";
+  margin-left: 4px;
+}
+
+.card__link {
+  color: black;
+  width: 100%;
+  text-decoration: none;
+}
+
+.catalog__pages {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 15px;
+  margin: 20px 0;
+}
+
+.catalog__page-box {
+  display: flex;
+  margin-right: 10px;
+}
+
+.catalog__page-link {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+.catalog__page-link:hover {
+  color: red;
+  text-decoration: underline;
+}
